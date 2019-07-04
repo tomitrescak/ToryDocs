@@ -1,0 +1,89 @@
+---
+title: 'Apollo'
+metaTitle: 'Catalogue of components for authorisation support'
+---
+
+import { ApolloProps, ApolloDocs } from '../../src/components/examples/apollo';
+
+<img width="300" src="https://cdn-images-1.medium.com/max/1600/1*BIR94Q8MDPonvvFtsnUYLg.png" />
+
+Following components add Graphql capabilities using `Mutation` and a `Query` component from the popular [Apollo GraohQL](https://www.apollographql.com) package.
+
+<h2 className="ui header">
+  <i className="cogs icon"></i>
+  <div className="content">
+    Components
+  </div>
+</h2>
+
+### Installation
+
+```bash
+yarn add @toryjs/components-apollo
+yarn add apollo-client graphql-tag graphql react-apollo apollo-cache-inmemory
+```
+
+Depending whether you want to batch your requests want to use **only one of following**:
+
+```bash
+yarn add apollo-link-http
+yarn add apollo-link-batch-http 
+```
+
+Last, if you want to use authentication:
+
+```bash
+yarn add apollo-link-context 
+```
+
+Vou also can use a `configureClient` handler to manually setup your client.
+
+### Apollo Provider
+
+Initialises the Apollo Provider with a provided endpoint and the request type. 
+You can specify to batch request and to support [JWT based authentication](https://jwt.io/introduction/).
+Please see example configurations of Apollo Provider in the `Query` component below.
+
+> The provider exposes "ApolloClient" object in the context under `context.providers.client`.
+
+<ApolloProps name="ApolloProvider" />
+
+### Apollo Query
+
+Executes a graphql query on the endpoint specified in the ApolloProvider. 
+You can also fake the query result providing value in the `fakeData` field.
+The query result can be stored in the global state by binding the result to a dataset field,
+or it can be passed down to child component on a provided prop name.
+
+<ApolloDocs id={'query'} header="Example: Query" />
+
+<ApolloProps name="ApolloQuery" />
+
+### Apollo Mutation
+
+### Apollo Query
+
+Executes a graphql query on the endpoint specified in the ApolloProvider. 
+You can also fake the query result providing value in the `fakeData` field.
+The query result can be stored in the global state by binding the result to a dataset field,
+or it can be passed down to child component on a provided prop name. The example below
+will only work in the editor as we are <i>faking the mutation result</i>, where faking
+works only in the editor.
+
+#### Important
+
+When you click on the button below, you will receive an error. The reson is that we did not 
+configure and back end url in the Apollo Provider. But, when you open the editor and click onthe button,
+you will see the result and an alert popping un in the top right corner. 
+BUT, when you click on the button second time, you will again receive the error. The 
+reason is that we have configured only one fake return value for the test provider.
+for more info please see [the official documentation of the react-test-renderer](https://reactjs.org/docs/test-renderer.html).
+
+<ApolloDocs id={'mutation'} header="Example: Mutation" />
+
+<ApolloProps name="ApolloMutation" />
+
+
+
+
+

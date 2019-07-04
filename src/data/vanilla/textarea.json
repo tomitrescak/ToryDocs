@@ -1,0 +1,35 @@
+{
+  "form": {
+    "control": "Form",
+    "elements": [
+      {
+        "control": "Textarea",
+        "props": {
+          "value": { "source": "textValue" },
+          "placeholder": "Placeholder",
+          "control": "Textarea",
+          "label": "Styled (Validated)",
+          "css": "textarea {\nborder: 2px dotted blue;\nwidth: 100%;\n}"
+        },
+        "uid": "1562102028428"
+      }
+    ],
+    "uid": "P-0"
+  },
+  "schema": {
+    "type": "object",
+    "properties": {
+      "textValue": {
+        "type": "string",
+        "minLength": 10,
+        "title": "textValue",
+        "uid": "1562102028429"
+      }
+    },
+    "uid": "1562102028427"
+  },
+  "style": {},
+  "id": "textarea",
+  "modified": 1562102286107,
+  "uid": "textarea"
+}
