@@ -5,7 +5,7 @@ metaDescription: 'Catalogue of components from a Vanilla catalogue for Tory.js'
 icon: 'cogs'
 ---
 
-import { Props, Docs } from '../../src/components/examples/vanilla';
+import { VanillaProps, VanillaDocs } from '../examples/vanilla';
 
 Set of base components usefull to build your forms or websites. Please choose the component of your interest from the right menu.
 
@@ -26,38 +26,38 @@ yarn add @toryjs/components-vanilla
 
 Input component is a standard form component aimed for further styling. 
 
-<Docs id={'input'} header="Example: Input" group="vanilla"/>
+<VanillaDocs id={'input'} header="Example: Input" group="vanilla"/>
 
 Start typing into the input above to see the validation error. 
 The `minLength` validation is defined on the textValue field of the form dataset. 
 The style of the Error message is defined by the `FormConfig.ErrorView` component. 
 
-<Props name="Input" />
+<VanillaProps name="Input" />
 
 ### Textarea
 
 Textarea component is a standard form component aimed for further styling. 
 
-<Docs id={'textarea'} header="Example: Textarea" group="vanilla"/>
-<Props name="Textarea" />
+<VanillaDocs id={'textarea'} header="Example: Textarea" group="vanilla"/>
+<VanillaProps name="Textarea" />
 
 
 ### Checkbox
 
 Checkbox component is a standard form component aimed for further styling. 
-<Docs id={'checkbox'} header="Example: Checkbox" group="vanilla"/>
+<VanillaDocs id={'checkbox'} header="Example: Checkbox" group="vanilla"/>
 Try to enable or disable fields to trigger validations.
 
-<Props name="Checkbox" />
+<VanillaProps name="Checkbox" />
 
 
 ### Radio
 
 Radio component is a standard form component aimed for further styling. 
-<Docs id={'radio'} header="Example: Radio" group="vanilla"/>
+<VanillaDocs id={'radio'} header="Example: Radio" group="vanilla"/>
 Try to enable or disable fields to trigger validations.
 
-<Props name="Radio" />
+<VanillaProps name="Radio" />
 
 
 ### Dropdown
@@ -75,7 +75,7 @@ The values in the dropdown can be filtered by a value from the dataset. To speci
 * `Filter Column`: the name of the column from the list of options that will match the dataset field. 
   For example following option list will filter out only `{ text: 'Barcelona', value: 'bcn', country: 'es' }`:
 
-    ```
+    ```bash
     { text: 'Sydney', value: 'syd', country: 'au' },
     { text: 'Melbourne', value: 'mel', country: 'au' },
     { text: 'Bari', value: 'bari', country: 'it' },
@@ -85,19 +85,19 @@ The values in the dropdown can be filtered by a value from the dataset. To speci
 
   Check the examples below.
 
-<Docs id={'dropdown'} header="Example: Dropdown" group="vanilla"/>
-<Props name="Dropdown" />
+<VanillaDocs id={'dropdown'} header="Example: Dropdown" group="vanilla"/>
+<VanillaProps name="Dropdown" />
 
 ### Button
 
 Button executes a provided onClick handler. It can also be set to be a `submit`.
 
-<Docs id={'button'} header="Button Example" group="vanilla"/>
-<Props name="Button" />
+<VanillaDocs id={'button'} header="Button Example" group="vanilla"/>
+<VanillaProps name="Button" />
 
 ### Form
 
 Html Form is a standard Html form element which allows you to specify a handler for the `onSubmit` actions.
 
-<Docs id={'htmlForm'} header="Html Form" group="vanilla"/>
-<Props name="HtmlForm" />
+<VanillaDocs id={'htmlForm'} header="Html Form" group="vanilla"/>
+<VanillaProps name="HtmlForm" />

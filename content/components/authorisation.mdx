@@ -3,7 +3,7 @@ title: 'Authorisation'
 metaTitle: 'Catalogue of components for authorisation support'
 ---
 
-import { Props, Docs } from '../../src/components/examples/vanilla';
+import { VanillaProps, VanillaDocs } from '../examples/vanilla';
 
 Following components add authorisation and authentication capabilities to your application.
 They come from different packages, so please be mindful of installation instructions.
@@ -30,9 +30,9 @@ Also, for test purposes, you can *disable* the component. Auth Item component
 works well with fake Context during development, allowing to fake the logged in user. 
 *This components assumes that you keep `user` object in the `Context` with property `roles` of type `string[]`*.
 
-<Docs id={'auth'} header="Example: Auth Item" group="vanilla" />
+<VanillaDocs id={'auth'} header="Example: Auth Item" group="vanilla" />
 
-<Props name="AuthItem" />
+<VanillaProps name="AuthItem" />
 
 <h2 className="ui header">
   <i className="wpforms icon"></i>

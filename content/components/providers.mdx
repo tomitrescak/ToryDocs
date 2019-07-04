@@ -5,7 +5,7 @@ metaDescription: 'Catalogue of components from various catalogues for Tory.js'
 icon: 'cogs'
 ---
 
-import { Props, Docs } from '../../src/components/examples/vanilla';
+import { ProvidersProps, ProvidersDocs } from '../examples/providers';
 
 Set of providers usefull to build your forms or websites. 
 Please choose the component of your interest from the right menu.
@@ -25,12 +25,28 @@ Please choose the component of your interest from the right menu.
 yarn add @toryjs/components-react-alert
 ```
 
-Adds support for React alert. This instance of alert is added to context under `context.alert`, which can be used in handlers.
+Adds support for React alert. This instance of alert is added to context under `context.alert`, 
+which can be used in handlers. Following are the handlers we used to show alerts in the example below.
+Please see the [full documentation of the package](https://www.npmjs.com/package/react-alert).
+
+```ts
+const handlers = {
+  info({ context }) {
+    context.providers.alert.info('Info');
+  },
+  error({ context }) {
+    context.providers.alert.error('Error');
+  },
+  success({ context }) {
+    context.providers.alert.success('Success');
+  }
+};
+```
 
 
-### List of components
+<ProvidersDocs id="providers" header="Example: Alert Provider"  />
 
-- **Auth Item** - Displays content based on authorisation state
-- **Context** - Creates fake application context
-- **React Alert** - Adds support for react alert
+<ProvidersProps name="AlertProvider" />
+
+
 

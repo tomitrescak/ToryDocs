@@ -1,43 +1,46 @@
 import React from 'react';
 import { docsGroup } from '@toryjs/ui';
 
-function renderProps(props) {
+function renderProps(props, ref) {
   return (
-    <table className="ui striped celled table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>B.</th>
-          <th>Documentation</th>
-        </tr>
-      </thead>
-      <tbody>
-        {Object.keys(props).map((key, index) => {
-          const prop = props[key];
-          return (
-            <tr key={index}>
-              <td>{prop.control.props.label || prop.control.props.text}</td>
-              <td>
-                {prop.schema.type}
-                {prop.control.props.options && prop.control.props.options.length && (
-                  <>
-                    <hr />
-                    <ul>
-                      {prop.control.props.options.map((v, i) => (
-                        <li>{v && v.text}</li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-              </td>
-              <td>{prop.control.bound ? '✓' : '⨯'}</td>
-              <td dangerouslySetInnerHTML={{ __html: prop.control.documentation }} />
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
+    <div ref={ref}>
+      <table className="ui striped celled table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>B.</th>
+            <th>Documentation</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Object.keys(props).map((key, index) => {
+            const prop = props[key];
+            return (
+              <tr key={index}>
+                <td>{prop.control.props.label || prop.control.props.text}</td>
+                <td>
+                  {prop.schema.type}
+                  {prop.control.props.options && prop.control.props.options.length && (
+                    <>
+                      <span className="meta">[enum]</span>
+                      <hr />
+                      <ul className="propList">
+                        {prop.control.props.options.map((v, i) => (
+                          <li>{v && v.text}</li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </td>
+                <td>{prop.control.bound ? '✓' : '⨯'}</td>
+                <td dangerouslySetInnerHTML={{ __html: prop.control.documentation }} />
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
@@ -50,6 +53,22 @@ export const createDocs = (catalogue, editorCatalogue) => ({
     hideViews: ['pages', process.env.NODE_ENV == 'production' ? 'all' : '']
   }),
   Props: props => {
+    const ref = React.useRef();
+    const refChild = React.useRef();
+    const propButton = React.useRef();
+    const childButton = React.useRef();
+
+    React.useEffect(() => {
+      if (ref && ref.current && ref.current.getBoundingClientRect().height > 200) {
+        ref.current.classList.add('faded');
+        propButton.current.style.display = 'block';
+      }
+      if (refChild && refChild.current && refChild.current.getBoundingClientRect().height > 200) {
+        refChild.current.classList.add('faded');
+        childButton.current.style.display = 'block';
+      }
+    });
+
     const component = editorCatalogue.components[props.name];
     if (!component) {
       return <div>Component does not exist: {props.name}</div>;
@@ -58,12 +77,36 @@ export const createDocs = (catalogue, editorCatalogue) => ({
     return (
       <>
         <h4 className="ui header">{component.title} Props</h4>
-        {renderProps(component.props)}
+        {renderProps(component.props, ref)}
+        <button
+          className="ui button"
+          ref={propButton}
+          style={{ display: 'none' }}
+          onClick={() => {
+            ref.current.classList.remove('faded');
+            propButton.current.style.display = 'none';
+          }}
+        >
+          <i className="icon expand" />
+          Expand Props
+        </button>
 
         {component.childProps && (
           <>
             <h4 className="ui header">{component.title} Child Props</h4>
-            {renderProps(component.childProps)}
+            {renderProps(component.childProps, refChild)}
+            <button
+              className="ui button"
+              ref={childButton}
+              style={{ display: 'none' }}
+              onClick={() => {
+                refChild.current.classList.remove('faded');
+                childButton.current.style.display = 'none';
+              }}
+            >
+              <i className="icon expand" />
+              Expand Props
+            </button>
           </>
         )}
       </>

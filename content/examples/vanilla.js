@@ -32,9 +32,9 @@ const handlers = {
   ]
 };
 
-export const { DocsGroup, Props } = createDocs(catalogue, catalogueEditor);
+export const { DocsGroup, Props: VanillaProps } = createDocs(catalogue, catalogueEditor);
 
-export const Docs = props => {
+export const VanillaDocs = props => {
   if (process.env.NODE_ENV === 'production') {
     return (
       <StaticQuery

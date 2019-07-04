@@ -4,11 +4,16 @@ metaTitle: 'Catalogue of Semantic UI components'
 metaDescription: 'Catalogue of Semantic UI components for Tory.js'
 ---
 
+import { SemanticProps, SemanticDocs  } from '../examples/semantic';
+
 <img width="100" src="https://react.semantic-ui.com/logo.png" />
 
 Several components from the popular [Semantic UI](https://react.semantic-ui.com). 
 Please visit this website for the list of options. Contributions are welcome to support
 full catalogue of Semantic Components.
+
+Please visit the [official React Semantic UI page](https://react.semantic-ui.com) for comprehensive examples of 
+various combination of control properties.
 
 ### Installation
 
@@ -16,30 +21,144 @@ full catalogue of Semantic Components.
 yarn add @toryjs/components-semantic-ui
 ```
 
-<h2 className="ui header">
-  <i className="cogs icon"></i>
-  <div className="content">
-    Components
-  </div>
-</h2>
+#### Important
 
+Make sure you include the `semantic.css` somewhere in your document, 
+whether as an import in your html or in import in your css, for example from the
+`semantic-ui-css` package. To include the semantic-ui in your html, add this to your `index.html`.
+
+```html
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.2/semantic.min.css"
+  rel="stylesheet"
+  type="text/css"
+/>
 ```
-Documentation in Progress
-```
 
-### List of components
+### Input
 
-- **Button** 
-- **Checkbox** 
-- **Comment** 
-- **Dropdown** 
-- **Header** 
-- **Icon** 
-- **Input** 
-- **Menu** 
-- **Radio** 
-- **Search** 
-- **Segment** 
-- **Tabs** 
-- **Table** 
-- **Textarea** 
+Semantic [input](https://react.semantic-ui.com/elements/input/) component. 
+
+<SemanticDocs id={'input'} header="Example: Input" />
+
+Start typing into the input above to see the validation error. 
+The `minLength` validation is defined on the textValue field of the form dataset. 
+The style of the Error message is defined by the `FormConfig.ErrorView` component. 
+
+<SemanticProps name="Input" />
+
+### Textarea
+
+Semantic [textarea](https://react.semantic-ui.com/addons/text-area/) component. 
+
+<SemanticDocs id={'textarea'} header="Example: Textarea" />
+<SemanticProps name="Textarea" />
+
+### Checkbox
+
+Semantic [checkbox](https://react.semantic-ui.com/modules/checkbox/) component. 
+<SemanticDocs id={'checkbox'} header="Example: Checkbox" />
+Try to enable or disable fields to trigger validations.
+
+<SemanticProps name="Checkbox" />
+
+
+### Radio
+
+Semantic [radio](https://react.semantic-ui.com/addons/radio/) component. 
+<SemanticDocs id={'radio'} header="Example: Radio" />
+Try to enable or disable fields to trigger validations.
+
+<SemanticProps name="Radio" />
+
+
+### Dropdown
+
+Semantic [Dropdown](https://react.semantic-ui.com/modules/dropdown/) component is a very versatile component which can obtain the list of options from a variety of sources:
+
+* `Options` (bound): Explicitly specified list of options. If you are binding the options to a handler, make sure it is not an asynchronous handler.
+* `Async Options`: Asynchronous handler, returning `Promise` of `Options`.
+* `Schema Source`: From a schema item's enum (Enumerations).
+
+The values in the dropdown can be filtered by a value from the dataset. To specify such cascading filter, you need to define two values:
+
+* `Filter Source`: the name of the dataset field (e.g. `country` with value `es`)
+* `Filter Column`: the name of the column from the list of options that will match the dataset field. 
+  For example following option list will filter out only `{ text: 'Barcelona', value: 'bcn', country: 'es' }`:
+
+    ```bash
+    { text: 'Sydney', value: 'syd', country: 'au' },
+    { text: 'Melbourne', value: 'mel', country: 'au' },
+    { text: 'Bari', value: 'bari', country: 'it' },
+    { text: 'Barcelona', value: 'bcn', country: 'es' },
+    { text: 'Rozhanovce', value: 'roz', country: 'sk' }
+    ```
+
+  Check the examples below.
+
+<SemanticDocs id={'dropdown'} header="Example: Dropdown" />
+<SemanticProps name="Dropdown" />
+
+### Button
+
+Semantic [button](https://react.semantic-ui.com/elements/button/) executes a provided onClick handler. It can also be set to be a `submit` button.
+
+<SemanticDocs id={'button'} header="Button Example" />
+<SemanticProps name="Button" />
+
+### Comment
+
+A semantic [comment](https://react.semantic-ui.com/views/comment/) component.
+
+<SemanticDocs id="comment" header="Comment Example" />
+<SemanticProps name="Comment" />
+
+### Header
+
+A semantic [header](https://react.semantic-ui.com/elements/header/) component.
+
+<SemanticDocs id="header" header="Header Example" />
+<SemanticProps name="Header" />
+
+### Icon
+
+A semantic [icon](https://react.semantic-ui.com/elements/icon/) component.
+
+<SemanticDocs id="icon" header="Icon Example" />
+<SemanticProps name="icon" />
+
+### Menu
+
+A semantic [menu](https://react.semantic-ui.com/collections/menu/) component.
+
+<SemanticDocs id="menu" header="Menu Example" />
+<SemanticProps name="menu" />
+
+### Search
+
+A semantic [search](https://react.semantic-ui.com/modules/search/) component.
+
+<SemanticDocs id="search" header="Search Example" />
+<SemanticProps name="Search" />
+
+### Segment
+
+A semantic [segment](https://react.semantic-ui.com/elements/segment/) segment.
+
+<SemanticDocs id="segment" header="Segment Example" />
+<SemanticProps name="Segment" />
+
+### Tabs
+
+A custom modification of tabs component.
+
+<SemanticDocs id="tabs" header="Tabs Example" />
+<SemanticProps name="Tabs" />
+
+### Table
+
+A semantic [table](https://react.semantic-ui.com/collections/table/) component.
+
+<SemanticDocs id="table" header="Table Example" />
+<SemanticProps name="Table" />
+
