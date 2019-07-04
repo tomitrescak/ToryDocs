@@ -1,5 +1,5 @@
 {
-  "dir": "content/data",
+  "dir": "src/data",
   "history": 10,
   "port": 9001,
   "useIndex": false
