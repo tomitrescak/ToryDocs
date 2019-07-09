@@ -6,14 +6,23 @@ metaDescription: 'Catalogue of Semantic UI components for Tory.js'
 
 import { SemanticProps, SemanticDocs  } from '../../src/examples/semantic';
 
-<img width="100" src="https://react.semantic-ui.com/logo.png" />
-
-Several components from the popular [Semantic UI](https://react.semantic-ui.com). 
-Please visit this website for the list of options. Contributions are welcome to support
-full catalogue of Semantic Components.
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <img width="250" src="https://react.semantic-ui.com/logo.png" />
+    </td>
+    <td style={{paddingLeft: '12px'}}>
+      <p>
+A selection of components from the popular [Semantic UI](https://react.semantic-ui.com). Currently, we support mainly the form components. Contributions are welcome to support full catalogue of Semantic Components. If you are looking at implementing other front end frameworks, such as Material UI or Bootstrap, please check out this implementation, as we do provide a slick API to facilitate that.
+</p>
 
 Please visit the [official React Semantic UI page](https://react.semantic-ui.com) for comprehensive examples of 
 various combination of control properties.
+</td>
+</tr>
+</tbody>
+</table>
 
 ### Installation
 
@@ -71,7 +80,6 @@ Try to enable or disable fields to trigger validations.
 
 <SemanticProps name="Radio" />
 
-
 ### Dropdown
 
 Semantic [Dropdown](https://react.semantic-ui.com/modules/dropdown/) component is a very versatile component which can obtain the list of options from a variety of sources:
@@ -84,7 +92,7 @@ The values in the dropdown can be filtered by a value from the dataset. To speci
 
 * `Filter Source`: the name of the dataset field (e.g. `country` with value `es`)
 * `Filter Column`: the name of the column from the list of options that will match the dataset field. 
-  For example following option list will filter out only `{ text: 'Barcelona', value: 'bcn', country: 'es' }`:
+  For example following option list will filter out only `{ title: 'Barcelona', value: 'bcn', country: 'es' }`:
 
     ```bash
     { text: 'Sydney', value: 'syd', country: 'au' },
@@ -125,21 +133,26 @@ A semantic [header](https://react.semantic-ui.com/elements/header/) component.
 A semantic [icon](https://react.semantic-ui.com/elements/icon/) component.
 
 <SemanticDocs id="icon" header="Icon Example" />
-<SemanticProps name="icon" />
+<SemanticProps name="Icon" />
 
 ### Menu
 
 A semantic [menu](https://react.semantic-ui.com/collections/menu/) component.
+You can easily use dropdwons in the menu by specifying the `item` property on dropdown.
 
 <SemanticDocs id="menu" header="Menu Example" />
-<SemanticProps name="menu" />
+<SemanticProps name="Menu" />
 
-### Search
+### Lookup
 
 A semantic [search](https://react.semantic-ui.com/modules/search/) component.
 
+The configuration of search requires following components:
+- *search handler*, which has to return a *Promise* with a search result. Search result is a collection of search items with *text* and *value*.
+- *search name* [optional], which tell the search handler which data is expected from the search handler
+
 <SemanticDocs id="search" header="Search Example" />
-<SemanticProps name="Search" />
+<SemanticProps name="Lookup" />
 
 ### Segment
 
@@ -150,7 +163,7 @@ A semantic [segment](https://react.semantic-ui.com/elements/segment/) segment.
 
 ### Tabs
 
-A custom modification of tabs component.
+A modification of menu component to display and handle tabs. You can either display a series of tabs for the same type of array datasource, or a separate tab for a specific content.
 
 <SemanticDocs id="tabs" header="Tabs Example" />
 <SemanticProps name="Tabs" />

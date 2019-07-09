@@ -1,1 +1,1 @@
-{"id":"header","uid":"header","form":{"control":"Form","uid":"P-0","elements":[]},"schema":{"type":"object","properties":{}},"version":0}
+{"form":{"control":"Form","elements":[{"control":"Header","props":{"content":"Super Heading","dividing":true,"icon":"bath","size":"huge","subheader":"This is just a subheader","control":"Header"},"uid":"1562575172370"}],"uid":"P-0"},"schema":{"type":"object","uid":"1562575172369","properties":{}},"style":{},"uid":"header","modified":1562576469299}

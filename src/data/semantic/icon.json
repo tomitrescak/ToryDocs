@@ -1,1 +1,1 @@
-{"id":"icon","uid":"icon","form":{"control":"Form","uid":"P-0","elements":[]},"schema":{"type":"object","properties":{}},"version":0}
+{"form":{"control":"Form","elements":[{"control":"Icon","props":{"name":"thumbs up","control":"Icon"},"uid":"1562312774851"}],"uid":"P-0"},"schema":{"type":"object","uid":"1562312774850","properties":{}},"style":{},"uid":"icon","modified":1562312793129}

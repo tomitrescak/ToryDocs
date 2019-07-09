@@ -10,6 +10,22 @@ import { catalogue as svc, catalogueEditor as svce } from '@toryjs/components-se
 export const catalogue = merge(vc, svc);
 export const catalogueEditor = merge(vce, svce);
 
+const cities = [
+  { text: 'Sydney', value: 'syd', country: 'au' },
+  { text: 'Melbourne', value: 'mel', country: 'au' },
+  { text: 'Bari', value: 'bari', country: 'it' },
+  { text: 'Barcelona', value: 'bcn', country: 'es' },
+  { text: 'Rozhanovce', value: 'roz', country: 'sk' }
+];
+
+const citiesSearch = [
+  { title: 'Sydney', value: 'syd', country: 'au' },
+  { title: 'Melbourne', value: 'mel', country: 'au' },
+  { title: 'Bari', value: 'bari', country: 'it' },
+  { title: 'Barcelona', value: 'bcn', country: 'es' },
+  { title: 'Rozhanovce', value: 'roz', country: 'sk' }
+];
+
 const handlers = {
   asyncLoadOptions: () => {
     return new Promise(accept => {
@@ -21,13 +37,14 @@ const handlers = {
   notifyClick: () => {
     alert('Clicked');
   },
-  loadCities: () => [
-    { text: 'Sydney', value: 'syd', country: 'au' },
-    { text: 'Melbourne', value: 'mel', country: 'au' },
-    { text: 'Bari', value: 'bari', country: 'it' },
-    { text: 'Barcelona', value: 'bcn', country: 'es' },
-    { text: 'Rozhanovce', value: 'roz', country: 'sk' }
-  ]
+  loadCities: () => cities,
+  search: ({ args }) => {
+    return new Promise(accept => {
+      accept(
+        citiesSearch.filter(c => c.title.toLowerCase().indexOf(args.value.toLowerCase()) >= 0)
+      );
+    });
+  }
 };
 
 export const { DocsGroup, Props: SemanticProps } = createDocs(catalogue, catalogueEditor);

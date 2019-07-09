@@ -1,11 +1,12 @@
 ---
 title: 'Providers'
-metaTitle: 'Providers of verious services for your application'
+metaTitle: 'Providers of data / ui services for your application'
 metaDescription: 'Catalogue of components from various catalogues for Tory.js'
 icon: 'cogs'
 ---
 
 import { ProvidersProps, ProvidersDocs } from '../../src/examples/providers';
+import { VanillaProps, VanillaDocs } from '../../src/examples/vanilla';
 
 Set of providers usefull to build your forms or websites. 
 Please choose the component of your interest from the right menu.
@@ -16,6 +17,24 @@ Please choose the component of your interest from the right menu.
     Utility Components
   </div>
 </h2>
+
+### Fetch Provider
+
+#### Installation
+
+```bash
+yarn add @toryjs/components-vanilla
+```
+
+Adds support for performing `fetch` requests to json endpoints. 
+You can provide options of the fetch request using the `options` field. For a full list of options, please see the [full documentation of the fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+
+You can also *fake* the data returned from the endpoint. This will work only in the edit mode.
+
+<VanillaDocs id="fetch" header="Example: Fetch Requests"  />
+
+<VanillaProps name="Fetch" />
+
 
 ### Alert Provider
 

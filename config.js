@@ -14,7 +14,7 @@ const config = {
     links: [{ text: '', link: '' }]
   },
   sidebar: {
-    forcedNavOrder: ['/introduction', '/components'],
+    forcedNavOrder: ['/setup', '/editor', '/components'],
     links: [{ text: '', link: '' }]
   },
   siteMetadata: {

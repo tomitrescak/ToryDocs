@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-gitbook-boilerplate",
+  "name": "toryjs-docs",
   "private": true,
   "description": "Documentation, built with mdx",
   "author": "Praveen <praveen@hasura.io> (@praveenweb)",
@@ -16,7 +16,10 @@
     "@toryjs/components-react-alert": "^1.0.3",
     "@toryjs/components-semantic-ui": "^1.0.4",
     "@toryjs/components-vanilla": "^1.0.2",
+    "@toryjs/components-react-router": "^1.0.2",
+    "@toryjs/editor": "^1.0.0",
     "@toryjs/form": "^1.0.2",
+    "@toryjs/server": "^1.0.7",
     "@toryjs/ui": "^1.0.17",
     "apollo-cache-inmemory": "^1.6.2",
     "apollo-client": "^2.6.3",

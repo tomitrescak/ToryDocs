@@ -1,5 +1,5 @@
 import React from 'react';
-import { docsGroup } from '@toryjs/ui';
+import { docsGroup } from '@toryjs/editor';
 
 function renderProps(props, ref) {
   return (
@@ -27,7 +27,7 @@ function renderProps(props, ref) {
                       <hr />
                       <ul className="propList">
                         {prop.control.props.options.map((v, i) => (
-                          <li>{v && v.text}</li>
+                          <li key={i}>{v && v.text}</li>
                         ))}
                       </ul>
                     </>
@@ -44,13 +44,13 @@ function renderProps(props, ref) {
   );
 }
 
-export const createDocs = (catalogue, editorCatalogue) => ({
+export const createDocs = (catalogue, editorCatalogue, hideViews) => ({
   DocsGroup: docsGroup({
     catalogue,
     editorCatalogue,
     url: 'http://localhost:9001/api',
     showTopMenu: process.env.NODE_ENV === 'development',
-    hideViews: ['pages', process.env.NODE_ENV == 'production' ? 'all' : '']
+    hideViews: hideViews || ['pages', process.env.NODE_ENV == 'production' ? 'all' : '']
   }),
   Props: props => {
     const ref = React.useRef();

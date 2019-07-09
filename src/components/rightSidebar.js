@@ -7,6 +7,11 @@ import config from '../../config';
 
 const forcedNavOrder = config.sidebar.forcedNavOrder;
 
+String.prototype.trimChars = function(c) {
+  var re = new RegExp('^[' + c + ']+|[' + c + ']+$', 'g');
+  return this.replace(re, '');
+};
+
 const Sidebar = styled('aside')`
   width: 100%;
   background-color: #fff;
@@ -87,7 +92,7 @@ const SidebarLayout = ({ location }) => (
           let innerItems;
           if (item !== undefined) {
             if (
-              item.node.fields.slug === location.pathname ||
+              item.node.fields.slug.trimChars('/') === location.pathname.trimChars('/') ||
               config.gatsby.pathPrefix + item.node.fields.slug === location.pathname
             ) {
               if (item.node.tableOfContents.items) {

@@ -21,18 +21,18 @@ const Sidebar = styled('aside')`
   position: sticky;
   top: 0;
   padding-right: 0;
-  background-color: #c5cbe3;
+  background-color: #687da6;
   /* Safari 4-5, Chrome 1-9 */
-  background: linear-gradient(#405681 #c5cbe3);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#405681), to(#c5cbe3));
+  background: linear-gradient(#405681 #687da6);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#405681), to(#687da6));
   /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, #405681, #c5cbe3);
+  background: -webkit-linear-gradient(top, #405681, #687da6);
   /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, #405681, #c5cbe3);
+  background: -moz-linear-gradient(top, #405681, #687da6);
   /* IE 10 */
-  background: -ms-linear-gradient(top, #405681, #c5cbe3);
+  background: -ms-linear-gradient(top, #405681, #687da6);
   /* Opera 11.10+ */
-  background: -o-linear-gradient(top, #405681, #c5cbe3);
+  background: -o-linear-gradient(top, #405681, #687da6);
   /* @media only screen and (max-width: 767px) {
     padding-left: 0px;
     background-color: #405681;
@@ -95,7 +95,7 @@ const ListItem = styled(({ className, active, level, ...props }) => {
       props.active &&
       `
       color: #555;
-      background-color: #c5cbe3;
+      background-color: #687da6;
     `} // external link icon
     svg {
       float: right;

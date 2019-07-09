@@ -1,1 +1,1 @@
-{"id":"search","uid":"search","form":{"control":"Form","uid":"P-0","elements":[]},"schema":{"type":"object","properties":{}},"version":0}
+{"form":{"control":"Form","elements":[{"control":"Lookup","props":{"searchName":"City","search":"search","limit":10,"value":{"source":"city"},"control":"Lookup"},"uid":"1562576593176"}],"uid":"P-0"},"schema":{"type":"object","properties":{"city":{"type":"string","title":"city","uid":"1562576829471"}},"uid":"1562576593175"},"style":{},"uid":"search","modified":1562576936699}
