@@ -24,13 +24,37 @@ yarn add @toryjs/components-vanilla
   </div>
 </h2>
 
-```bash
-Documentation in Progress
-```
+### Stack
 
-- **Flex Layout** - FlexBox layout
-- **Grid Layout** - Grid Layout
-- **Stack Layout** - Simpler version of flex layout
-- **Repeater** - More advanced layout which binds to arrays and uses custom templates to render content of each line
+Simple horizontal or vertical stack layout. 
+You can drag new items into the layout, but items need to be reordered in the outline. 
 
+<VanillaDocs id={'stack'} header="Stack Layout" hideViews={[]} />
 
+<VanillaProps name="Stack" />
+
+### Flex
+
+[Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) layout. 
+You can drag new items into the layout, but items need to be reordered in the outline. 
+
+<VanillaDocs id={'flex'} header="Flex Layout" hideViews={[]} />
+
+<VanillaProps name="Flex" />
+
+### Grid
+
+[Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) layout. 
+
+<VanillaDocs id={'grid'} header="Grid Layout" hideViews={[]} />
+
+<VanillaProps name="Grid" />
+
+### Repeater
+
+Repeater binds to an array datasource and renders a custom layout for each 
+array item. You can specify different templates for add / edit or view.
+
+<VanillaDocs id={'fetch'} header="Repeater Layout" hideViews={[]} />
+
+<VanillaProps name="Repeater" />

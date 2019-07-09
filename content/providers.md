@@ -1,5 +1,5 @@
 ---
-title: 'Providers'
+title: 'Creating Providers'
 metaTitle: 'How to add and use custom providers in tory.js'
 ---
 

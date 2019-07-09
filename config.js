@@ -1,8 +1,8 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'https://mystifying-hopper-2309bd.netlify.com',
-    gaTrackingId: null
+    siteUrl: 'https://toryjs.com',
+    gaTrackingId: 'UA-143536266-1'
   },
   header: {
     logo:
@@ -14,15 +14,16 @@ const config = {
     links: [{ text: '', link: '' }]
   },
   sidebar: {
-    forcedNavOrder: ['/setup', '/editor', '/components'],
+    forcedNavOrder: ['/setup', '/components'],
     links: [{ text: '', link: '' }]
   },
   siteMetadata: {
-    title: 'Tory.JS | Hasura',
+    title: 'Tory.JS | Website development has never been this much fun!',
     description: 'Tory.JS Documentation',
     ogImage: null,
     docsLocation: 'https://github.com/toryjs/toryjs/tree/master/content',
-    favicon: 'https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg'
+    favicon:
+      'https://user-images.githubusercontent.com/2682705/60425295-83f87580-9bf2-11e9-98c1-fe217070d6cc.png'
   }
 };
 

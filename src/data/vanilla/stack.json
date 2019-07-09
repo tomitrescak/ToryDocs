@@ -1,0 +1,94 @@
+{
+  "form": {
+    "control": "Form",
+    "elements": [
+      {
+        "control": "Stack",
+        "elements": [
+          {
+            "control": "Form",
+            "props": { "pageId": "P-1562670849220", "control": "Form" },
+            "uid": "1562670844416"
+          },
+          {
+            "control": "Form",
+            "props": { "pageId": "P-1562670849220", "control": "Form" },
+            "uid": "1562670844419"
+          },
+          {
+            "control": "Form",
+            "props": { "pageId": "P-1562670849220", "control": "Form" },
+            "uid": "1562670844418"
+          },
+          {
+            "control": "Form",
+            "props": { "pageId": "P-1562670849220", "control": "Form" },
+            "uid": "1562670844417"
+          }
+        ],
+        "props": {
+          "layout": "column",
+          "gap": "6px",
+          "control": "Stack",
+          "label": "Column (Vertical) Layout"
+        },
+        "uid": "1562670844415"
+      },
+      {
+        "control": "Stack",
+        "elements": [
+          {
+            "control": "Form",
+            "props": { "pageId": "P-1562670849220", "control": "Form" },
+            "uid": "1562670844420"
+          },
+          {
+            "control": "Form",
+            "props": { "pageId": "P-1562670849220", "control": "Form" },
+            "uid": "1562670844421"
+          },
+          {
+            "control": "Form",
+            "props": { "pageId": "P-1562670849220", "control": "Form" },
+            "uid": "1562670844422"
+          },
+          {
+            "control": "Form",
+            "props": { "pageId": "P-1562670849220", "control": "Form" },
+            "uid": "1562670844423"
+          }
+        ],
+        "props": {
+          "layout": "row",
+          "padding": "6px",
+          "control": "Stack",
+          "label": "Row (Horizontal) Layout"
+        },
+        "uid": "1562670844424"
+      }
+    ],
+    "pages": [
+      {
+        "control": "Form",
+        "elements": [
+          {
+            "control": "Text",
+            "props": {
+              "value": "Control",
+              "control": "Text",
+              "css": "background: green;\nwidth: 120px;\npadding: 6px;\ncolor: white;"
+            },
+            "uid": "1562670844414"
+          }
+        ],
+        "props": { "editorLabel": "Custom Control" },
+        "uid": "P-1562670849220"
+      }
+    ],
+    "uid": "P-0"
+  },
+  "schema": { "type": "object", "uid": "1562670844413", "properties": {} },
+  "style": {},
+  "uid": "stack",
+  "modified": 1562671052350
+}

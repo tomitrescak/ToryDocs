@@ -22,6 +22,17 @@ yarn add @toryjs/components-vanilla
   </div>
 </h2>
 
+### Form
+
+Tory Form allows you to define a custom form / component / page and then reuse it in your application.
+First, define a new `page` that will represent your control. Then, you can use it in your Tory Form. 
+This Form differs from the standard `HtmlForm` defined below.
+
+You also have an option to create your form prgramatically, by implementing the `onCreate` handler.
+
+<VanillaDocs id={'form'} header="Tory Form" hideViews={[]} />
+<VanillaProps name="Form" />
+
 ### Input
 
 Input component is a standard form component aimed for further styling. 
@@ -95,7 +106,7 @@ Button executes a provided onClick handler. It can also be set to be a `submit`.
 <VanillaDocs id={'button'} header="Button Example" group="vanilla"/>
 <VanillaProps name="Button" />
 
-### Form
+### Html Form
 
 Html Form is a standard Html form element which allows you to specify a handler for the `onSubmit` actions.
 

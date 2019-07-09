@@ -18,7 +18,11 @@ function renderProps(props, ref) {
             const prop = props[key];
             return (
               <tr key={index}>
-                <td>{prop.control.props.label || prop.control.props.text}</td>
+                <td>
+                  {prop.control.props.label ||
+                    prop.control.props.text ||
+                    prop.control.props.editorLabel}
+                </td>
                 <td>
                   {prop.schema.type}
                   {prop.control.props.options && prop.control.props.options.length && (

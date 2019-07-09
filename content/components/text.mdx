@@ -23,18 +23,52 @@ yarn add @toryjs/components-vanilla
   </div>
 </h2>
 
-```bash
-Documentation in Progress
-```
+### Text
 
-- **Formula** - Dynamic expression evaluating data in your dataset/
-- **Image** - a simple `<img />`
-- **Link** - a simple `<a href />`. If you want to use cusom links, please use appropriate catalogues, such as the one for React router.
-- **Markdown** - renders markdown text
-- **Selector** - Modifies the dataset value when clicked
-- **Text** - Displays either a static or bound text.
+Text can display either a static or bound value:
 
-<hr />
+<VanillaDocs id="text" header="Text Example" />
+<VanillaProps name="Text" />
 
-- **Author:** Tomi Trescak
-- **Email:** tomi.trescak@gmail.com
+
+### Text
+
+Image <img /> field. The source vakue can be bound, please see the `Fetch` example in providers section.
+
+<VanillaDocs id="image" header="Image" />
+<VanillaProps name="Image" />
+
+### Link
+
+A classic html anchor. 
+
+<VanillaDocs id="link" header="Link"  />
+<VanillaProps name="Link" />
+
+
+### Markdown
+
+A markdown formatted text. Please see the famous [cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for all Markdown options.
+
+<VanillaDocs id="markdown" header="Markdown"  />
+<VanillaProps name="Markdown" />
+
+### Formula
+
+Formula uses javascript to dynamically evaluate data in your dataset. You can access the 
+dataset values by `this.fieldName` notation. In the example below, please modify the input valuesand observe how the calculation changes.
+In the formula field you can use the full power of javascript.
+
+<VanillaDocs id="formula" header="Formula Example"  />
+<VanillaProps name="Formula" />
+
+### Selector
+
+Selector can be used to interactively set the value in your dataset. It listens to the onClick event
+upon which it stores the value from `source` to `target`.
+
+<VanillaDocs id="selector" header="Selector Example"  />
+<VanillaProps name="LinkSelector" />
+
+
+

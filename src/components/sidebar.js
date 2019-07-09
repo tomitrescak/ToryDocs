@@ -94,7 +94,7 @@ const ListItem = styled(({ className, active, level, ...props }) => {
     ${props =>
       props.active &&
       `
-      color: #555;
+      color: #dedede;
       background-color: #687da6;
     `} // external link icon
     svg {
