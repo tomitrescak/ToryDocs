@@ -16,7 +16,7 @@
     "@toryjs/components-react-alert": "^1.0.3",
     "@toryjs/components-semantic-ui": "^1.0.4",
     "@toryjs/components-vanilla": "^1.0.2",
-    "@toryjs/components-react-router": "^1.0.2",
+    "@toryjs/components-react-router": "^1.0.1",
     "@toryjs/editor": "^1.0.0",
     "@toryjs/form": "^1.0.2",
     "@toryjs/server": "^1.0.7",
