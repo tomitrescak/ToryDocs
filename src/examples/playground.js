@@ -24,6 +24,7 @@ export const Editor = props => (
     editorCatalogue={catalogueEditor}
     storage={storage}
     handlers={{}}
+    loadStyles={false}
     theme={themes.dark}
   />
 );
